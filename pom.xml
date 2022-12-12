@@ -14,6 +14,28 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <profiles>
+    <profile>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <id>desenvolvimento</id>
+      <properties>
+        <project.packaging>jar</project.packaging>
+        <tomcat.scope>compile</tomcat.scope>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>producao</id>
+      <properties>
+        <project.packaging>war</project.packaging>
+        <tomcat.scope>provided</tomcat.scope>
+      </properties>
+    </profile>
+
+  </profiles>
+
   <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
   <parent>
     <groupId>org.springframework.boot</groupId>
