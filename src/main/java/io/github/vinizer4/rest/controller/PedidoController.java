@@ -8,6 +8,7 @@ import io.github.vinizer4.rest.dto.InformacaoItemPedidoDTO;
 import io.github.vinizer4.rest.dto.InformacoesPedidoDTO;
 import io.github.vinizer4.rest.dto.PedidoDTO;
 import io.github.vinizer4.service.PedidoService;
+import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -38,7 +39,7 @@ public class PedidoController {
     }
 
     @GetMapping("{id}")
-    public InformacoesPedidoDTO getById(@PathVariable Integer id ){
+    public InformacoesPedidoDTO getById( @PathVariable Integer id ){
         return service
                 .obterPedidoCompleto(id)
                 .map( p -> converter(p) )

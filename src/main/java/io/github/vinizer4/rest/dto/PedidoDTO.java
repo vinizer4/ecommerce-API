@@ -1,6 +1,5 @@
 package io.github.vinizer4.rest.dto;
 
-
 import io.github.vinizer4.validation.NotEmptyList;
 import lombok.AllArgsConstructor;
 import lombok.Data;

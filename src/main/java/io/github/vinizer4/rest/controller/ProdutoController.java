@@ -1,5 +1,6 @@
 package io.github.vinizer4.rest.controller;
 
+import io.github.vinizer4.domain.entity.Cliente;
 import io.github.vinizer4.domain.entity.Produto;
 import io.github.vinizer4.domain.repository.Produtos;
 import org.springframework.data.domain.Example;
